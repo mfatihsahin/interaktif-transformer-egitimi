@@ -4,7 +4,7 @@ An interactive web application that explains the Transformer architecture with c
 
 ## Live Demo
 
-Visit the live website: [Transformer Architecture Explained](https://yourusername.github.io/transformer_website/)
+Visit the live website: [Transformer Architecture Explained](https://mfatihsahin.github.io/interaktif-transformer-egitimi/)
 
 ## Features
 
@@ -26,8 +26,8 @@ Visit the live website: [Transformer Architecture Explained](https://yourusernam
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/transformer_website.git
-cd transformer_website
+git clone https://github.com/mfatihsahin/interaktif-transformer-egitimi.git
+cd interaktif-transformer-egitimi
 ```
 
 2. Install the dependencies
@@ -62,12 +62,12 @@ This project is configured to be easily deployed to GitHub Pages:
 
 1. Update the `homepage` field in `package.json` with your GitHub username:
    ```json
-   "homepage": "https://yourusername.github.io/transformer_website"
+   "homepage": "https://yourusername.github.io/interaktif-transformer-egitimi"
    ```
 
 2. Also update the `metadataBase` URL in `src/app/layout.tsx`:
    ```typescript
-   metadataBase: new URL('https://yourusername.github.io/transformer_website')
+   metadataBase: new URL('https://yourusername.github.io/interaktif-transformer-egitimi')
    ```
 
 3. Deploy the site:
