@@ -21,6 +21,7 @@ export default function Home() {
   // Refs for each section for scroll detection
   const sectionRefs = {
     introduction: useRef<HTMLDivElement>(null),
+    outline: useRef<HTMLDivElement>(null),
     seqModels: useRef<HTMLDivElement>(null),
     attention: useRef<HTMLDivElement>(null),
     architecture: useRef<HTMLDivElement>(null),
@@ -124,6 +125,136 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+      
+      {/* Tutorial Outline Section */}
+      <section
+        ref={sectionRefs.outline}
+        id="outline"
+        className="section-container py-16 bg-gray-50 dark:bg-slate-900"
+      >
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Tutorial Outline</h2>
+          <p className="text-center mb-10 text-gray-700 dark:text-gray-300">
+            Follow this step-by-step guide to understand the Transformer architecture from fundamentals to advanced concepts.
+          </p>
+          
+          <div className="grid gap-6 md:grid-cols-2">
+            <motion.div 
+              className="card border-l-4 border-blue-500 hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+            >
+              <h3 className="text-xl font-semibold mb-2">1. Sequence-to-Sequence Modeling</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Explore traditional sequence models like RNNs, LSTMs, and GRUs, their limitations, and why 
+                we needed a better architecture. Learn about the information bottleneck problem in encoder-decoder frameworks.
+              </p>
+              <button
+                onClick={() => scrollToSection('seqModels')}
+                className="mt-3 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
+              >
+                Jump to section →
+              </button>
+            </motion.div>
+            
+            <motion.div 
+              className="card border-l-4 border-purple-500 hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+            >
+              <h3 className="text-xl font-semibold mb-2">2. Attention Mechanism</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Understand how attention mechanisms allow models to focus on relevant parts of the input 
+                sequence. Visualize attention weights and see how they improve the context encoding.
+              </p>
+              <button
+                onClick={() => scrollToSection('attention')}
+                className="mt-3 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
+              >
+                Jump to section →
+              </button>
+            </motion.div>
+            
+            <motion.div 
+              className="card border-l-4 border-green-500 hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
+            >
+              <h3 className="text-xl font-semibold mb-2">3. Self-Attention & Multi-Head Attention</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Discover the key innovation of self-attention that allows each position to attend to all positions,
+                and how multiple attention heads capture different aspects of relationships between tokens.
+              </p>
+              <button
+                onClick={() => scrollToSection('attention')}
+                className="mt-3 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
+              >
+                Jump to section →
+              </button>
+            </motion.div>
+            
+            <motion.div 
+              className="card border-l-4 border-red-500 hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+            >
+              <h3 className="text-xl font-semibold mb-2">4. Transformer Architecture</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Explore the complete transformer architecture with its encoder-decoder structure,
+                positional encodings, feed-forward networks, and the powerful combination of components.
+              </p>
+              <button
+                onClick={() => scrollToSection('architecture')}
+                className="mt-3 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
+              >
+                Jump to section →
+              </button>
+            </motion.div>
+            
+            <motion.div 
+              className="card border-l-4 border-yellow-500 hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+            >
+              <h3 className="text-xl font-semibold mb-2">5. Applications & Variants</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Learn about real-world applications of transformers in NLP, computer vision, and scientific domains.
+                Discover popular transformer variants like BERT, GPT, T5, and Vision Transformer.
+              </p>
+              <button
+                onClick={() => scrollToSection('applications')}
+                className="mt-3 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
+              >
+                Jump to section →
+              </button>
+            </motion.div>
+            
+            <motion.div 
+              className="card border-l-4 border-indigo-500 hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
+            >
+              <h3 className="text-xl font-semibold mb-2">6. Interactive Demo</h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Experience transformers in action with an interactive demo that lets you generate text
+                and observe how the model processes your inputs to produce meaningful outputs.
+              </p>
+              <button
+                onClick={() => scrollToSection('demo')}
+                className="mt-3 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
+              >
+                Jump to section →
+              </button>
+            </motion.div>
+          </div>
         </div>
       </section>
       

@@ -11,6 +11,7 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { name: 'Introduction', href: '#introduction' },
+  { name: 'Outline', href: '#outline' },
   { name: 'Sequence Models', href: '#seq-models' },
   { name: 'Attention Mechanism', href: '#attention' },
   { name: 'Transformer Architecture', href: '#architecture' },
