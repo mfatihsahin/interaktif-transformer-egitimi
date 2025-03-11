@@ -757,8 +757,8 @@ export default function Home() {
               </p>
               <a
                 href="https://arxiv.org/abs/1706.03762"
-                target="_blank"
-                rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
                 className="text-sm text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300"
               >
                 Read the original paper →
